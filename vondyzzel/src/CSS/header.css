@@ -1,47 +1,38 @@
 /* src/CSS/header.css */
 
-/* Styling for the header */
 header {
-    display: flex;
-    justify-content: center;             /* Centers the logo and text horizontally */
-    align-items: center;                 /* Centers the logo and text vertically */
-    height: 50vh;                        /* Set header height to 50% of the viewport height */
-    width: 100%;                         /* Full width */
-    text-align: center;                  /* Center text horizontally */
-    color: white;                        /* Text color */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);  /* Adds text shadow for better readability */
-    overflow: hidden;                    /* Ensures nothing overflows from the header */
+  background-image: url('../Images/logo.jpg');  /* Se till att sökvägen till bilden är korrekt */
+  background-size: contain;  /* Gör så att hela bilden syns utan att beskäras */
+  background-position: center;  /* Centrerar bakgrundsbilden */
+  background-repeat: no-repeat;  /* Förhindrar att bilden upprepas */
+  background-attachment: fixed;  /* Gör så att bakgrunden är fast när du scrollar */
+  height: 80vh;  /* Anpassar höjden beroende på skärmstorlek */
+  width: 100%;  /* Full bredd */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);  /* Textskugga för bättre läsbarhet */
+  position: relative;
+  top: 0;
+}
+
+/* Responsiv design */
+@media (max-width: 768px) {
+  header {
+    height: 40vh;  /* Justera för mindre skärmar */
   }
-  
-  /* Styling for the logo image */
-  header img {
-    max-width: 80%;    /* Logo width will be 80% of the header width */
-    max-height: 60%;   /* Logo height will be 60% of the header height */
-    object-fit: contain; /* Keeps the image aspect ratio intact */
+}
+
+@media (max-width: 480px) {
+  header {
+    height: 30vh;  /* Justera för ännu mindre skärmar */
   }
-  
-  /* Responsive styling for smaller screens */
-  @media (max-width: 768px) {
-    header {
-      height: 40vh;  /* Reduce header height on tablets */
-    }
-  
-    header img {
-      max-width: 60%;  /* Further reduce logo size on tablets */
-      max-height: 50%; /* Further reduce logo height on tablets */
-    }
-  }
-  
-  @media (max-width: 480px) {
-    header {
-      height: 30vh;  /* Reduce header height on small screens */
-    }
-  
-    header img {
-      max-width: 50%;  /* Further reduce logo size on mobile */
-      max-height: 40%; /* Further reduce logo height on mobile */
-    }
-  }
+}
+
+
+
+
   
   
   
